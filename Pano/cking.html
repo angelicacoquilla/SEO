@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Pano Estamos</title>
+	<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="Styles/header-style.css">
+	<link rel="stylesheet" type="text/css" href="Styles/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="Styles/font-awesome.min.css">
+	<link rel="stylesheet" href="Styles/w3.css" type="text/css">
+    <link rel="stylesheet" href="Styles/style.css" type="text/css">
+</head>
+
+<header>
+	<nav id="header" class="navbar navbar-fixed-top">
+		<div class="container">
+		   	<ul class="nav nav-header navbar-nav navbar-left masthead-nav" font-size: 20px;">
+		        <li><a href="index.html" style="color: rgb(218,165,32);">Home</a></li>
+		        <li><a href="index.html#pic2" style="color: rgb(218,165,32);">About Us</a></li>
+	            <li><a href="index.html#pic3" style="color: rgb(218,165,32);">Contact Us</a></li>
+	        </ul>
+		</div>
+	</nav>
+</header>
+<body>
+	<div class="store" >
+		<br>
+		<p style="color: white; text-align: center; font-size: 40px;"><img src="Images/cking/logo_chowking.png" alt="Cafe Tavera Logo" style="width: 90px; height: 50%;"> <u>CHOWKING</u></p>
+		<div id="container" style="margin-left: 10%; margin-top: 2%;">
+			<img class="slides" src="Images/cking/chaofan.png" style="width: 40%; height: 300px;"/>
+			<img class="slides" src="Images/cking/1pcchkn.png" style="width: 40%; height: 300px;"/>
+			<img class="slides" src="Images/cking/halo.png" style="width: 40%; height: 300px;"/>
+			<img class="slides" src="Images/cking/chocopao.png" style="width: 40%; height: 300px;"/>
+			<img class="slides" src="Images/cking/chicharap.png" style="width: 40%; height: 300px;"/>
+		</div>
+		<script>
+			var index = 1;
+			function plusIndex(n){
+				index = index + n;
+				showImage(index);
+			}
+			showImage(1);
+			function showImage(n){
+				var i;
+				var x = document.getElementsByClassName("slides")
+				if( n > x.length ){ index = 1};
+				if( n < 1) { index = x.length};
+				for(i=0;i<x.length;i++ ){
+					x[i].style.display = "none";
+				}
+				x[index-1].style.display = "block";
+			}
+			autoSlide();
+			function autoSlide(){
+				var i;
+				var x = document.getElementsByClassName("slides")
+				for(i=0;i<x.length;i++ ){
+					x[i].style.display = "none";
+				}
+				if(index > x.length){
+					index = 1
+				}
+				x[index-1].style.display = "block";
+				index++;
+				setTimeout(autoSlide, 2000);
+			}
+		</script>
+		<br><br>
+		<div style="text-align: center; font-size: 10px; width: 70%; height: 200px;">
+		  <span style="float: left; margin-left: 5%;background-color: white; padding: 2%; text-align: center;">Bolton Street, Corner Rizal Street,<br>Poblacion District, Davao City, <br>8000 Davao del Sur</span>
+		  <span style="float: left; margin-left: 3%;background-color: white; padding: 2%; text-align: center; height: 70px;">(082) 221 3322</span>
+		  <span style="float: left; margin-left: 3%;background-color: white; padding: 2%; text-align: center; height: 70px;">MON-SUN  10AM-10PM</span>  
+		</div>
+	</div>
+
+	<div class="menu" style="color: #303030; float: right; margin-top: -48%; margin-right: 10%; background-color: white; padding: 2%; padding-left: 5%; padding-right: 5%; font-size: 10px;">
+		<h4><center>Chowking Lauriat</center></h4>
+		<br>
+		<p> Sweet & Sour Pork Lauriat<h5 style="word-spacing: 1cm; text-indent: 15%;">P125.00</h5></p>
+		<p> Crunchy Breaded Pork Lauriat<h5 style="word-spacing: 1cm; text-indent: 15%;">P125.00</h5></p>
+		<p> Crispy Fish Fillet Lauriat<h5 style="word-spacing: 1cm; text-indent: 15%;">P125.00</h5></p>
+		<p> Orange Chicken Lauriat<h5 style="word-spacing: 1cm; text-indent: 15%;">P125.00</h5></p>
+		<p> Shanghai Lauriat<h5 style="word-spacing: 1cm; text-indent: 15%;">P125.00</h5></p>
+		<p> Fried Chicken Lauriat <h5 style="word-spacing: 1cm; text-indent: 15%;">P145.00</h5></p>
+		<p> Chicken Supreme Lauriat	<h5 style="word-spacing: 1cm; text-indent: 15%;">P165.00</h5></p>
+	</div>
+
+	<div class="top">
+		<button onclick="topFunction()" id="myBtn" title="Go to top">Back to Top</button>
+		<script>
+			window.onscroll = function() {scrollFunction()};
+			function scrollFunction() {
+			    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+			        document.getElementById("myBtn").style.display = "block";
+			    } else {
+			        document.getElementById("myBtn").style.display = "none";
+			    }
+			}
+			function topFunction() {
+			    document.body.scrollTop = 0;
+			    document.documentElement.scrollTop = 0;
+			}
+		</script>
+		<style>
+			#myBtn {
+			  display: none;
+			  position: fixed;
+			  bottom: 10px;
+			  right: 20px;
+			  font-size: 12px;
+			  border: none;
+			  outline: none;
+			  background-color: grey;
+			  color: white;
+			  cursor: pointer;
+			  padding: 1%;
+			  border-radius: 5%;
+			}
+			#myBtn:hover {
+			  background-color: #555;
+			}
+		</style>
+	</div>
+
+	<div class="w3-content w3-display-container" style="margin-top: -45%; float: right; margin-right: 5%; background-color: white; padding: 2%;">
+	  <img class="mySlides" src="Images/cking/menu1.jpg" style="width:90%; margin-left: 5%;">
+	  <img class="mySlides" src="Images/cking/menu2.jpg" style="width:90%; margin-left: 5%;">
+	  <img class="mySlides" src="Images/cking/menu3.jpg" style="width:90%; margin-left: 5%;">
+	  <img class="mySlides" src="Images/cking/menu4.jpg" style="width:90%; margin-left: 5%;">
+
+
+	  <button class="w3-button w3-black w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
+	  <button class="w3-button w3-black w3-display-right" onclick="plusDivs(1)">&#10095;</button>
+	</div>
+	<script>
+	var slideIndex = 1;
+	showDivs(slideIndex);
+
+	function plusDivs(n) {
+	  showDivs(slideIndex += n);
+	}
+
+	function showDivs(n) {
+	  var i;
+	  var x = document.getElementsByClassName("mySlides");
+	  if (n > x.length) {slideIndex = 1}    
+	  if (n < 1) {slideIndex = x.length}
+	  for (i = 0; i < x.length; i++) {
+	     x[i].style.display = "none";  
+	  }
+	  x[slideIndex-1].style.display = "block";  
+	}
+	</script>
+
+	<div class="row" style="margin-top: 30%;">
+	  	<div class="column" style="background-color:rgba(0, 0, 0, 0.5);">
+	    	<h2>Top</h2>
+	    	<hr><br>
+	    	<p>About Us</p>
+	    	<p>Contact Us</p>
+	    	<p>Developers</p>
+	  	</div>
+	 	<div class="column" style="background-color:rgba(0, 0, 0, 0.5)">
+	    	<h2>Categories</h2>
+	    	<hr><br>
+	    	<p>Cafe and Pastries</p>
+	    	<p>Fast Food Chains</p>
+	    	<p>Restaurant</p>
+	  	</div>
+	  	<div class="column" style="background-color:rgba(0, 0, 0, 0.5);">
+	    	<h2>Products</h2>
+	    	<hr><br>
+	    	<p>Appetizer</p>
+	    	<p>Dessert</p>
+	    	<p>Viand</p>
+	  	</div>
+	</div>
+	<div style="color: rgb(248,248,248); font-size: 13px; text-align: center;">
+		<br>
+		<p>By continuing past this page, you agree to our Terms of Service, Cookie Policy, Privacy Policy and Content Policies. All rights reserved.</p>
+		<br>
+	</div>
+</body>	
+</html>
